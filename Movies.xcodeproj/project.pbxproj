@@ -99,13 +99,11 @@
 		678B131623A17FCB004C9304 /* Movies */ = {
 			isa = PBXGroup;
 			children = (
-				678B131723A17FCB004C9304 /* AppDelegate.swift */,
-				678B131923A17FCB004C9304 /* SceneDelegate.swift */,
-				678B131B23A17FCB004C9304 /* ViewController.swift */,
-				678B131D23A17FCB004C9304 /* Main.storyboard */,
-				678B132023A17FCC004C9304 /* Assets.xcassets */,
-				678B132223A17FCC004C9304 /* LaunchScreen.storyboard */,
-				678B132523A17FCC004C9304 /* Info.plist */,
+				678B134723A182BC004C9304 /* Application */,
+				678B134B23A182FB004C9304 /* Storyboards */,
+				678B134A23A182F1004C9304 /* ViewControllers */,
+				678B134923A182E7004C9304 /* Libraries */,
+				678B134823A182D2004C9304 /* Resources */,
 			);
 			path = Movies;
 			sourceTree = "<group>";
@@ -126,6 +124,48 @@
 				678B133B23A17FCD004C9304 /* Info.plist */,
 			);
 			path = MoviesUITests;
+			sourceTree = "<group>";
+		};
+		678B134723A182BC004C9304 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				678B131723A17FCB004C9304 /* AppDelegate.swift */,
+				678B131923A17FCB004C9304 /* SceneDelegate.swift */,
+				678B132523A17FCC004C9304 /* Info.plist */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		678B134823A182D2004C9304 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				678B132023A17FCC004C9304 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		678B134923A182E7004C9304 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		678B134A23A182F1004C9304 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				678B131B23A17FCB004C9304 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		678B134B23A182FB004C9304 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				678B132223A17FCC004C9304 /* LaunchScreen.storyboard */,
+				678B131D23A17FCB004C9304 /* Main.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -436,7 +476,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2K3J9PFDL3;
-				INFOPLIST_FILE = Movies/Info.plist;
+				INFOPLIST_FILE = Movies/Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -454,7 +494,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2K3J9PFDL3;
-				INFOPLIST_FILE = Movies/Info.plist;
+				INFOPLIST_FILE = Movies/Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
