@@ -1,6 +1,6 @@
 //
 //  CoreDataManager.swift
-//  GeoNamesWiki
+//  Movies
 //
 //  Created by Sergey Krasiuk on 05/11/2019.
 //  Copyright © 2019 Sergey Krasiuk. All rights reserved.
@@ -20,7 +20,7 @@ class CoreDataManager {
     
     lazy var persistentContainer: NSPersistentContainer = {
 
-        let container = NSPersistentContainer(name: "Geonames")
+        let container = NSPersistentContainer(name: "Movie")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             
             if let error = error as NSError? {
@@ -48,15 +48,12 @@ class CoreDataManager {
         }
     }
     
-    func isContextExists(by key: String) -> NSManagedObject? {
+    func isContextExists() -> [NSManagedObject]? {
         
-        let keyRequest = Keyword.request()
-        keyRequest.predicate = NSPredicate(format: "key == %@", key)
-        
-        guard let keyword = try? CoreDataManager.shared.context.fetch(keyRequest).first else {
+        guard let movies = try? CoreDataManager.shared.context.fetch(Movie.request()), movies.isEmpty else {
             return nil
         }
         
-        return keyword
+        return movies
     }
 }

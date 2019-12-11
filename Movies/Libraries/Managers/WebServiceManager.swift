@@ -1,6 +1,6 @@
 //
 //  WebServiceManager.swift
-//  GeoNamesWiki
+//  Movies
 //
 //  Created by Sergey Krasiuk on 04/11/2019.
 //  Copyright © 2019 Sergey Krasiuk. All rights reserved.
@@ -10,14 +10,14 @@ import Foundation
 
 class WebServiceManager {
     
-    enum WikiWebServiceAPI: String {
-        case geoNames = "http://api.geonames.org/wikipediaSearchJSON"
+    enum WebServiceAPI: String {
+        case movies = "http://api.androidhive.info/json/movies.json"
     }
     
     static let shared = WebServiceManager()
     private init() {}
     
-    func fetch(fromWebService service: WikiWebServiceAPI, withParameters parameters: [String: String], completion: @escaping ((String?) -> Void)) {
+    func fetch(fromWebService service: WebServiceAPI, withParameters parameters: [String: String], completion: @escaping ((String?) -> Void)) {
         
         guard var components = URLComponents(string: service.rawValue) else {
             return
@@ -29,7 +29,11 @@ class WebServiceManager {
         let request = URLRequest(url: components.url!)
         let session = URLSession.shared.dataTask(with: request) { (data, response, error) in
             
-            guard let responseData = data, let response = response as? HTTPURLResponse, (200 ..< 300) ~= response.statusCode, error == nil else {
+            guard let responseData = data,
+                let response = response as? HTTPURLResponse,
+                (200 ..< 300) ~= response.statusCode,
+                error == nil else {
+                    
                 completion(nil)
                 return
             }
@@ -41,7 +45,7 @@ class WebServiceManager {
                 
                 let decoder = JSONDecoder()
                 decoder.userInfo[CodingUserInfoKey.context!] = CoreDataManager.shared.context
-                _ = try decoder.decode(Keyword.self, withJSONObject: json as Any)
+                _ = try decoder.decode(Movie.self, withJSONObject: json as Any)
                 CoreDataManager.shared.saveContext()
                 completion(parameters["q"])
                 

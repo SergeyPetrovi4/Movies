@@ -17,6 +17,7 @@
 		678B134D23A18405004C9304 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 678B134C23A18405004C9304 /* Splash.storyboard */; };
 		678B135423A184C5004C9304 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678B135223A184C5004C9304 /* CoreDataManager.swift */; };
 		678B135523A184C5004C9304 /* WebServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678B135323A184C5004C9304 /* WebServiceManager.swift */; };
+		678B135823A186BD004C9304 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678B135723A186BD004C9304 /* Movie.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		678B134C23A18405004C9304 /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
 		678B135223A184C5004C9304 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		678B135323A184C5004C9304 /* WebServiceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServiceManager.swift; sourceTree = "<group>"; };
+		678B135723A186BD004C9304 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				678B135123A1848A004C9304 /* Managers */,
+				678B135623A186AE004C9304 /* Models */,
 			);
 			path = Libraries;
 			sourceTree = "<group>";
@@ -204,6 +207,14 @@
 				678B135323A184C5004C9304 /* WebServiceManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		678B135623A186AE004C9304 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				678B135723A186BD004C9304 /* Movie.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -342,6 +353,7 @@
 				678B135423A184C5004C9304 /* CoreDataManager.swift in Sources */,
 				678B131823A17FCB004C9304 /* AppDelegate.swift in Sources */,
 				678B131A23A17FCB004C9304 /* SceneDelegate.swift in Sources */,
+				678B135823A186BD004C9304 /* Movie.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
