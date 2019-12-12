@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -27,6 +27,8 @@
 		678C0A8B23A271B400C6079E /* MoviesListContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678C0A8823A271B400C6079E /* MoviesListContract.swift */; };
 		678C0A8C23A271B400C6079E /* MoviesListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678C0A8923A271B400C6079E /* MoviesListPresenter.swift */; };
 		678C0A8D23A271B400C6079E /* MoviesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678C0A8A23A271B400C6079E /* MoviesListViewController.swift */; };
+		678C0A9023A2821A00C6079E /* RappleProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 678C0A8F23A2821A00C6079E /* RappleProgressHUD */; };
+		678C0A9323A2828200C6079E /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 678C0A9223A2828200C6079E /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +82,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				678C0A9323A2828200C6079E /* Kingfisher in Frameworks */,
+				678C0A9023A2821A00C6079E /* RappleProgressHUD in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +272,10 @@
 			dependencies = (
 			);
 			name = Movies;
+			packageProductDependencies = (
+				678C0A8F23A2821A00C6079E /* RappleProgressHUD */,
+				678C0A9223A2828200C6079E /* Kingfisher */,
+			);
 			productName = Movies;
 			productReference = 678B131423A17FCB004C9304 /* Movies.app */;
 			productType = "com.apple.product-type.application";
@@ -340,6 +348,10 @@
 				Base,
 			);
 			mainGroup = 678B130B23A17FCB004C9304;
+			packageReferences = (
+				678C0A8E23A2821A00C6079E /* XCRemoteSwiftPackageReference "RappleProgressHUD" */,
+				678C0A9123A2828200C6079E /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 678B131523A17FCB004C9304 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -726,6 +738,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		678C0A8E23A2821A00C6079E /* XCRemoteSwiftPackageReference "RappleProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/rjeprasad/RappleProgressHUD.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.3;
+			};
+		};
+		678C0A9123A2828200C6079E /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.11.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		678C0A8F23A2821A00C6079E /* RappleProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 678C0A8E23A2821A00C6079E /* XCRemoteSwiftPackageReference "RappleProgressHUD" */;
+			productName = RappleProgressHUD;
+		};
+		678C0A9223A2828200C6079E /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 678C0A9123A2828200C6079E /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		678B136623A19349004C9304 /* Movies.xcdatamodeld */ = {
