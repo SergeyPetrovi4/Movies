@@ -17,7 +17,16 @@
 		678B134D23A18405004C9304 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 678B134C23A18405004C9304 /* Splash.storyboard */; };
 		678B135423A184C5004C9304 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678B135223A184C5004C9304 /* CoreDataManager.swift */; };
 		678B135523A184C5004C9304 /* WebServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678B135323A184C5004C9304 /* WebServiceManager.swift */; };
-		678B135823A186BD004C9304 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678B135723A186BD004C9304 /* Movie.swift */; };
+		678B135C23A18B21004C9304 /* SplashContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678B135923A18B21004C9304 /* SplashContract.swift */; };
+		678B135D23A18B21004C9304 /* SplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678B135A23A18B21004C9304 /* SplashPresenter.swift */; };
+		678B135E23A18B21004C9304 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678B135B23A18B21004C9304 /* SplashViewController.swift */; };
+		678B136823A19349004C9304 /* Movies.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 678B136623A19349004C9304 /* Movies.xcdatamodeld */; };
+		678B137523A1983A004C9304 /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678B137323A1983A004C9304 /* Genre.swift */; };
+		678B137623A1983A004C9304 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678B137423A1983A004C9304 /* Movie.swift */; };
+		678C0A8723A26DE400C6079E /* CodingUserInfoKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678C0A8623A26DE400C6079E /* CodingUserInfoKey.swift */; };
+		678C0A8B23A271B400C6079E /* MoviesListContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678C0A8823A271B400C6079E /* MoviesListContract.swift */; };
+		678C0A8C23A271B400C6079E /* MoviesListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678C0A8923A271B400C6079E /* MoviesListPresenter.swift */; };
+		678C0A8D23A271B400C6079E /* MoviesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678C0A8A23A271B400C6079E /* MoviesListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +63,16 @@
 		678B134C23A18405004C9304 /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
 		678B135223A184C5004C9304 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		678B135323A184C5004C9304 /* WebServiceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServiceManager.swift; sourceTree = "<group>"; };
-		678B135723A186BD004C9304 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		678B135923A18B21004C9304 /* SplashContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashContract.swift; sourceTree = "<group>"; };
+		678B135A23A18B21004C9304 /* SplashPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenter.swift; sourceTree = "<group>"; };
+		678B135B23A18B21004C9304 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		678B136723A19349004C9304 /* Movies.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Movies.xcdatamodel; sourceTree = "<group>"; };
+		678B137323A1983A004C9304 /* Genre.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
+		678B137423A1983A004C9304 /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		678C0A8623A26DE400C6079E /* CodingUserInfoKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodingUserInfoKey.swift; sourceTree = "<group>"; };
+		678C0A8823A271B400C6079E /* MoviesListContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListContract.swift; sourceTree = "<group>"; };
+		678C0A8923A271B400C6079E /* MoviesListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListPresenter.swift; sourceTree = "<group>"; };
+		678C0A8A23A271B400C6079E /* MoviesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +163,7 @@
 		678B134823A182D2004C9304 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				678B136623A19349004C9304 /* Movies.xcdatamodeld */,
 				678B132023A17FCC004C9304 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -153,6 +172,7 @@
 		678B134923A182E7004C9304 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				678C0A8523A26DD600C6079E /* Extensions */,
 				678B135123A1848A004C9304 /* Managers */,
 				678B135623A186AE004C9304 /* Models */,
 			);
@@ -182,6 +202,9 @@
 		678B134E23A18454004C9304 /* Splash */ = {
 			isa = PBXGroup;
 			children = (
+				678B135B23A18B21004C9304 /* SplashViewController.swift */,
+				678B135923A18B21004C9304 /* SplashContract.swift */,
+				678B135A23A18B21004C9304 /* SplashPresenter.swift */,
 			);
 			path = Splash;
 			sourceTree = "<group>";
@@ -189,6 +212,9 @@
 		678B134F23A1845E004C9304 /* MoviesList */ = {
 			isa = PBXGroup;
 			children = (
+				678C0A8A23A271B400C6079E /* MoviesListViewController.swift */,
+				678C0A8823A271B400C6079E /* MoviesListContract.swift */,
+				678C0A8923A271B400C6079E /* MoviesListPresenter.swift */,
 			);
 			path = MoviesList;
 			sourceTree = "<group>";
@@ -212,9 +238,18 @@
 		678B135623A186AE004C9304 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				678B135723A186BD004C9304 /* Movie.swift */,
+				678B137323A1983A004C9304 /* Genre.swift */,
+				678B137423A1983A004C9304 /* Movie.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		678C0A8523A26DD600C6079E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				678C0A8623A26DE400C6079E /* CodingUserInfoKey.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -349,11 +384,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				678B137523A1983A004C9304 /* Genre.swift in Sources */,
 				678B135523A184C5004C9304 /* WebServiceManager.swift in Sources */,
+				678B135D23A18B21004C9304 /* SplashPresenter.swift in Sources */,
 				678B135423A184C5004C9304 /* CoreDataManager.swift in Sources */,
+				678C0A8B23A271B400C6079E /* MoviesListContract.swift in Sources */,
+				678B137623A1983A004C9304 /* Movie.swift in Sources */,
 				678B131823A17FCB004C9304 /* AppDelegate.swift in Sources */,
+				678C0A8D23A271B400C6079E /* MoviesListViewController.swift in Sources */,
 				678B131A23A17FCB004C9304 /* SceneDelegate.swift in Sources */,
-				678B135823A186BD004C9304 /* Movie.swift in Sources */,
+				678C0A8C23A271B400C6079E /* MoviesListPresenter.swift in Sources */,
+				678B135C23A18B21004C9304 /* SplashContract.swift in Sources */,
+				678C0A8723A26DE400C6079E /* CodingUserInfoKey.swift in Sources */,
+				678B136823A19349004C9304 /* Movies.xcdatamodeld in Sources */,
+				678B135E23A18B21004C9304 /* SplashViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -682,6 +726,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		678B136623A19349004C9304 /* Movies.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				678B136723A19349004C9304 /* Movies.xcdatamodel */,
+			);
+			currentVersion = 678B136723A19349004C9304 /* Movies.xcdatamodel */;
+			path = Movies.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 678B130C23A17FCB004C9304 /* Project object */;
 }

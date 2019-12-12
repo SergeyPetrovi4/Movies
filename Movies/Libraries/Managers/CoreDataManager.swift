@@ -18,9 +18,17 @@ class CoreDataManager {
         return self.persistentContainer.viewContext
     }
     
+    static var isContextExists: Bool {
+        guard let movies = try? CoreDataManager.shared.context.fetch(Movie.request()), !movies.isEmpty else {
+            return false
+        }
+        
+        return true
+    }
+    
     lazy var persistentContainer: NSPersistentContainer = {
 
-        let container = NSPersistentContainer(name: "Movie")
+        let container = NSPersistentContainer(name: "Movies")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             
             if let error = error as NSError? {
@@ -48,12 +56,12 @@ class CoreDataManager {
         }
     }
     
-    func isContextExists() -> [NSManagedObject]? {
-        
-        guard let movies = try? CoreDataManager.shared.context.fetch(Movie.request()), movies.isEmpty else {
-            return nil
-        }
-        
-        return movies
-    }
+//    func isContextExists() -> Bool {
+//
+//        guard let movies = try? CoreDataManager.shared.context.fetch(Movie.request()), !movies.isEmpty else {
+//            return nil
+//        }
+//
+//        return movies
+//    }
 }

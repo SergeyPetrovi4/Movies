@@ -17,7 +17,7 @@ class WebServiceManager {
     static let shared = WebServiceManager()
     private init() {}
     
-    func fetch(fromWebService service: WebServiceAPI, withParameters parameters: [String: String], completion: @escaping ((String?) -> Void)) {
+    func fetch(fromWebService service: WebServiceAPI, withParameters parameters: [String: String], completion: @escaping ((Error?) -> Void)) {
         
         guard var components = URLComponents(string: service.rawValue) else {
             return
@@ -34,25 +34,21 @@ class WebServiceManager {
                 (200 ..< 300) ~= response.statusCode,
                 error == nil else {
                     
-                completion(nil)
+                completion(error)
                 return
             }
             
             do {
                 
-                var json = try JSONSerialization.jsonObject(with: responseData, options: .allowFragments) as? [String: Any]
-                json?["key"] = parameters["q"]
-                
                 let decoder = JSONDecoder()
                 decoder.userInfo[CodingUserInfoKey.context!] = CoreDataManager.shared.context
-                _ = try decoder.decode(Movie.self, withJSONObject: json as Any)
+                _ = try decoder.decode([Movie].self, from: responseData)
                 CoreDataManager.shared.saveContext()
-                completion(parameters["q"])
-                
+                completion(nil)
                 
             } catch let error {
                 print(error.localizedDescription)
-                completion(nil)
+                completion(error)
             }
         }
         
