@@ -27,6 +27,6 @@ class MoviesListPresenter: MoviesListPresenterProtocol {
             return
         }
         
-        self.view?.set(movies: movies.sorted(by: { $0.releaseYear < $1.releaseYear }))
+        self.view?.set(movies: movies.sorted(by: { $0.releaseYear > $1.releaseYear }))
     }
 }
