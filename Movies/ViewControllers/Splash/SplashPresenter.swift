@@ -14,14 +14,9 @@ class SplashPresenter: SplashPresenterProtocol {
     
     init(`for` view: SplashViewProtocol) {
         self.view = view
-        
-        self.requestData()
     }
     
     // MARK: - SplashPresenterProtocol
-}
-
-private extension SplashPresenter {
     
     func requestData() {
         

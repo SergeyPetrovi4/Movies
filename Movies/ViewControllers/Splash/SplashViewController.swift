@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RappleProgressHUD
 
 class SplashViewController: UIViewController, SplashViewProtocol  {
     
@@ -15,21 +16,24 @@ class SplashViewController: UIViewController, SplashViewProtocol  {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        RappleActivityIndicatorView.startAnimating()
         self.presenter = SplashPresenter(for: self)
     }
     
-    // MARK: - UI
-    
-    // MARK: - Actions
-    
-    // MARK: - Private
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        self.presenter.requestData()
+    }
     
     // MARK: - SplashViewProtocol
     
     func showMoviesListController() {
         
+        RappleActivityIndicatorView.stopAnimation()
         if let window = SceneDelegate.shared?.window {
-            window.rootViewController = MoviesListViewController.instantiate()
+            let navigationViewController = UINavigationController(rootViewController: MoviesListTableViewController.instantiate())
+            window.rootViewController = navigationViewController
         }
     }
 }

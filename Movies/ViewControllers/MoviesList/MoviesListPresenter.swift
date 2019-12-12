@@ -19,4 +19,14 @@ class MoviesListPresenter: MoviesListPresenterProtocol {
     // MARK: - Private
     
     // MARK: - MoviesListPresenterProtocol
+    
+    func fetchMovies() {
+        
+        guard let movies = try? CoreDataManager.shared.context.fetch(Movie.request()) else {
+            self.view?.displayAlert(with: "Movies", message: "Error fetching data from local storage", actions: nil)
+            return
+        }
+        
+        self.view?.set(movies: movies.sorted(by: { $0.releaseYear < $1.releaseYear }))
+    }
 }

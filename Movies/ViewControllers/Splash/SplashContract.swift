@@ -15,4 +15,5 @@ protocol SplashViewProtocol: class {
 
 protocol SplashPresenterProtocol {
     
+    func requestData()
 }

@@ -8,10 +8,12 @@
 
 import Foundation
 
-protocol MoviesListViewProtocol: class {
+protocol MoviesListViewProtocol: class, AlertableView {
     
+    func set(movies: [Movie])
 }
 
 protocol MoviesListPresenterProtocol {
     
+    func fetchMovies()
 }
