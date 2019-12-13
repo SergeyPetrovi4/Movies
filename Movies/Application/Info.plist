@@ -75,5 +75,7 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>The Camera is needed to scan QRCode</string>
 </dict>
 </plist>

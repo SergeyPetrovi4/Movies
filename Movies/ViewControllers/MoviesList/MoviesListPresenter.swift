@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreData
 
 class MoviesListPresenter: MoviesListPresenterProtocol {
     
@@ -28,5 +29,30 @@ class MoviesListPresenter: MoviesListPresenterProtocol {
         }
         
         self.view?.set(movies: movies.sorted(by: { $0.releaseYear > $1.releaseYear }))
+    }
+    
+    func addMovie(from result: String) {
+        
+        if let data = result.data(using: .utf8) {
+            
+            do {
+                
+                let movie = try WebServiceManager.shared.decode(Movie.self, fromData: data)
+                
+                let request = NSFetchRequest<Movie>(entityName: "Movie")
+                request.predicate = NSPredicate(format: "title == %@ AND releaseYear == %@", movie.title!, "\(movie.releaseYear)")
+                                
+                guard try CoreDataManager.shared.context.fetch(request).first == nil else {
+                    self.view?.displayAlert(with: "Movie", message: "Current movie already exist in the Database", actions: nil)
+                    return
+                }
+                
+                CoreDataManager.shared.saveContext()
+                self.fetchMovies()
+
+            } catch let error {
+                self.view?.displayAlert(with: "Movie", message: error.localizedDescription, actions: nil)
+            }
+        }
     }
 }

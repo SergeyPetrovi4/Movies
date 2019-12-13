@@ -7,12 +7,29 @@
 //
 
 import UIKit
+import AVFoundation
+import QRCodeReader
 
 class MoviesListTableViewController: UITableViewController, MoviesListViewProtocol  {
     
     static func instantiate() -> MoviesListTableViewController {
         return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: String(describing: MoviesListTableViewController.self)) as! MoviesListTableViewController
     }
+    
+    lazy var readerVC: QRCodeReaderViewController = {
+        let builder = QRCodeReaderViewControllerBuilder {
+            $0.reader = QRCodeReader(metadataObjectTypes: [.qr], captureDevicePosition: .back)
+            
+            // Configure the view controller
+            $0.showTorchButton        = false
+            $0.showSwitchCameraButton = false
+            $0.showCancelButton       = true
+            $0.showOverlayView        = true
+            $0.rectOfInterest         = CGRect(x: 0.2, y: 0.2, width: 0.6, height: 0.6)
+        }
+        
+        return QRCodeReaderViewController(builder: builder)
+    }()
     
     private var presenter: MoviesListPresenterProtocol!
     private var movies = [Movie]()
@@ -32,6 +49,22 @@ class MoviesListTableViewController: UITableViewController, MoviesListViewProtoc
     
     
     // MARK: - Actions
+    
+    @objc func didTapAddMovieBarButtonItem() {
+        
+        self.readerVC.completionBlock = { (result: QRCodeReaderResult?) in
+            
+            if let resultScanning = result?.value {
+                self.presenter.addMovie(from: resultScanning)
+            }
+            
+            self.readerVC.stopScanning()
+            self.readerVC.dismiss(animated: true, completion: nil)
+        }
+
+        self.readerVC.modalPresentationStyle = .formSheet
+        present(self.readerVC, animated: true, completion: nil)
+    }
     
     // MARK: - MoviesListViewProtocol
     
@@ -77,5 +110,10 @@ private extension MoviesListTableViewController {
         
         self.tableView.estimatedRowHeight = 44.0
         self.tableView.rowHeight = UITableView.automaticDimension
+        
+        let addMovieBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add,
+                                                    target: self,
+                                                    action: #selector(MoviesListTableViewController.didTapAddMovieBarButtonItem))
+        self.navigationItem.rightBarButtonItem = addMovieBarButtonItem
     }
 }

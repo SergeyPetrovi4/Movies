@@ -33,6 +33,7 @@
 		678C0A9923A2AD1B00C6079E /* GeneralProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678C0A9823A2AD1B00C6079E /* GeneralProtocols.swift */; };
 		678C0AA423A2CE6500C6079E /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678C0AA323A2CE6500C6079E /* MovieDetailsViewController.swift */; };
 		678C0AA623A3896E00C6079E /* SwiftyStarRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678C0AA523A3896E00C6079E /* SwiftyStarRatingView.swift */; };
+		678C0AA923A38F9E00C6079E /* QRCodeReader in Frameworks */ = {isa = PBXBuildFile; productRef = 678C0AA823A38F9E00C6079E /* QRCodeReader */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				678C0A9323A2828200C6079E /* Kingfisher in Frameworks */,
+				678C0AA923A38F9E00C6079E /* QRCodeReader in Frameworks */,
 				678C0A9023A2821A00C6079E /* RappleProgressHUD in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -311,6 +313,7 @@
 			packageProductDependencies = (
 				678C0A8F23A2821A00C6079E /* RappleProgressHUD */,
 				678C0A9223A2828200C6079E /* Kingfisher */,
+				678C0AA823A38F9E00C6079E /* QRCodeReader */,
 			);
 			productName = Movies;
 			productReference = 678B131423A17FCB004C9304 /* Movies.app */;
@@ -387,6 +390,7 @@
 			packageReferences = (
 				678C0A8E23A2821A00C6079E /* XCRemoteSwiftPackageReference "RappleProgressHUD" */,
 				678C0A9123A2828200C6079E /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				678C0AA723A38F9E00C6079E /* XCRemoteSwiftPackageReference "QRCodeReader.swift" */,
 			);
 			productRefGroup = 678B131523A17FCB004C9304 /* Products */;
 			projectDirPath = "";
@@ -796,6 +800,14 @@
 				minimumVersion = 5.11.0;
 			};
 		};
+		678C0AA723A38F9E00C6079E /* XCRemoteSwiftPackageReference "QRCodeReader.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/yannickl/QRCodeReader.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.1.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -808,6 +820,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 678C0A9123A2828200C6079E /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		678C0AA823A38F9E00C6079E /* QRCodeReader */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 678C0AA723A38F9E00C6079E /* XCRemoteSwiftPackageReference "QRCodeReader.swift" */;
+			productName = QRCodeReader;
 		};
 /* End XCSwiftPackageProductDependency section */
 

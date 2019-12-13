@@ -16,4 +16,5 @@ protocol MoviesListViewProtocol: class, AlertableView {
 protocol MoviesListPresenterProtocol {
     
     func fetchMovies()
+    func addMovie(from result: String)
 }

@@ -40,9 +40,7 @@ class WebServiceManager {
             
             do {
                 
-                let decoder = JSONDecoder()
-                decoder.userInfo[CodingUserInfoKey.context!] = CoreDataManager.shared.context
-                _ = try decoder.decode([Movie].self, from: responseData)
+                _ = try self.decode([Movie].self, fromData: responseData)
                 CoreDataManager.shared.saveContext()
                 completion(nil)
                 
@@ -56,11 +54,12 @@ class WebServiceManager {
     }
 }
 
-extension JSONDecoder {
+extension WebServiceManager {
     
-    func decode<T: Decodable>(_ type: T.Type, withJSONObject object: Any, options opt: JSONSerialization.WritingOptions = []) throws -> T {
-        
-        let data = try JSONSerialization.data(withJSONObject: object, options: opt)
-        return try decode(T.self, from: data)
+    func decode<T: Decodable>(_ type: T.Type, fromData data: Data) throws -> T {
+
+        let decoder = JSONDecoder()
+        decoder.userInfo[CodingUserInfoKey.context!] = CoreDataManager.shared.context
+        return try decoder.decode(T.self, from: data)
     }
 }
