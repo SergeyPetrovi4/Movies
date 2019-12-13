@@ -73,6 +73,12 @@ class MoviesListTableViewController: UITableViewController, MoviesListViewProtoc
         self.tableView.reloadData()
     }
     
+    func select(movie: Movie) {
+        if let index = self.movies.firstIndex(of: movie) {
+            self.tableView.selectRow(at: IndexPath(row: index, section: 0), animated: true, scrollPosition: .top)
+        }
+    }
+    
     // MARK: - UITableViewDataSource
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -43,7 +43,7 @@ private extension MovieDetailsViewController {
         
         self.movieTitleLabel.text = "Title: \(passedMovie.title ?? "")"
         self.movieReleaseYearLabel.text = "Release year: \(passedMovie.releaseYear)"
-        self.rating.value = CGFloat(passedMovie.rating / 5)
+        self.rating.value = CGFloat(passedMovie.rating / 2)
         self.genresLabel.text = "Genres: "
         
         passedMovie.genres?.forEach({ (genre) in

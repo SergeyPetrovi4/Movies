@@ -49,6 +49,7 @@ class MoviesListPresenter: MoviesListPresenterProtocol {
                 
                 CoreDataManager.shared.saveContext()
                 self.fetchMovies()
+                self.view?.select(movie: movie)
 
             } catch let error {
                 self.view?.displayAlert(with: "Movie", message: error.localizedDescription, actions: nil)

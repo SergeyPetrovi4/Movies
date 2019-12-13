@@ -11,6 +11,7 @@ import Foundation
 protocol MoviesListViewProtocol: class, AlertableView {
     
     func set(movies: [Movie])
+    func select(movie: Movie)
 }
 
 protocol MoviesListPresenterProtocol {
