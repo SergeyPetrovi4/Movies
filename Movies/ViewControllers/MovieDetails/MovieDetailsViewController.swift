@@ -14,7 +14,7 @@ class MovieDetailsViewController: UIViewController {
     @IBOutlet weak var movieTitleLabel: UILabel!
     @IBOutlet weak var movieReleaseYearLabel: UILabel!
     
-    @IBOutlet weak var rating: StarsView!
+    @IBOutlet weak var rating: SwiftyStarRatingView!
     @IBOutlet weak var genresLabel: UILabel!
     
     var movie: Movie?
@@ -43,7 +43,7 @@ private extension MovieDetailsViewController {
         
         self.movieTitleLabel.text = "Title: \(passedMovie.title ?? "")"
         self.movieReleaseYearLabel.text = "Release year: \(passedMovie.releaseYear)"
-        self.rating.currentRating = Int(passedMovie.rating)
+        self.rating.value = CGFloat(passedMovie.rating / 5)
         self.genresLabel.text = "Genres: "
         
         passedMovie.genres?.forEach({ (genre) in

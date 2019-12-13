@@ -114,7 +114,7 @@
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lk0-rJ-po4" customClass="StarsView" customModule="Movies" customModuleProvider="target">
+                                                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lk0-rJ-po4" customClass="SwiftyStarRatingView" customModule="Movies" customModuleProvider="target">
                                                                         <rect key="frame" x="61.5" y="0.0" width="320.5" height="24"/>
                                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                                         <userDefinedRuntimeAttributes>
@@ -124,6 +124,9 @@
                                                                             <userDefinedRuntimeAttribute type="boolean" keyPath="generateHapticFeedbackOnSelection" value="NO"/>
                                                                             <userDefinedRuntimeAttribute type="color" keyPath="starColor">
                                                                                 <color key="value" systemColor="systemBlueColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="spacing">
+                                                                                <real key="value" value="2"/>
                                                                             </userDefinedRuntimeAttribute>
                                                                         </userDefinedRuntimeAttributes>
                                                                     </view>
@@ -201,7 +204,7 @@
                         <outlet property="moviePosterImageView" destination="F4h-Mp-Ozv" id="IlN-95-3Pi"/>
                         <outlet property="movieReleaseYearLabel" destination="ska-wr-2Ks" id="BGv-Xb-lw6"/>
                         <outlet property="movieTitleLabel" destination="M2h-uX-mpT" id="7x1-AG-v6O"/>
-                        <outlet property="rating" destination="lk0-rJ-po4" id="Dt2-Hy-n2S"/>
+                        <outlet property="rating" destination="lk0-rJ-po4" id="FmU-gq-fU1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1zQ-FC-9VT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

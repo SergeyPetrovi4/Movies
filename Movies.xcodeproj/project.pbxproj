@@ -31,8 +31,8 @@
 		678C0A9323A2828200C6079E /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 678C0A9223A2828200C6079E /* Kingfisher */; };
 		678C0A9623A2863500C6079E /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678C0A9523A2863500C6079E /* MovieTableViewCell.swift */; };
 		678C0A9923A2AD1B00C6079E /* GeneralProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678C0A9823A2AD1B00C6079E /* GeneralProtocols.swift */; };
-		678C0AA223A2BF7500C6079E /* StarsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678C0AA123A2BF7500C6079E /* StarsView.swift */; };
 		678C0AA423A2CE6500C6079E /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678C0AA323A2CE6500C6079E /* MovieDetailsViewController.swift */; };
+		678C0AA623A3896E00C6079E /* SwiftyStarRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678C0AA523A3896E00C6079E /* SwiftyStarRatingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,8 +81,8 @@
 		678C0A8A23A271B400C6079E /* MoviesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListViewController.swift; sourceTree = "<group>"; };
 		678C0A9523A2863500C6079E /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		678C0A9823A2AD1B00C6079E /* GeneralProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralProtocols.swift; sourceTree = "<group>"; };
-		678C0AA123A2BF7500C6079E /* StarsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarsView.swift; sourceTree = "<group>"; };
 		678C0AA323A2CE6500C6079E /* MovieDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController.swift; sourceTree = "<group>"; };
+		678C0AA523A3896E00C6079E /* SwiftyStarRatingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyStarRatingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -287,7 +287,7 @@
 		678C0AA023A2BF6400C6079E /* CustomControls */ = {
 			isa = PBXGroup;
 			children = (
-				678C0AA123A2BF7500C6079E /* StarsView.swift */,
+				678C0AA523A3896E00C6079E /* SwiftyStarRatingView.swift */,
 			);
 			path = CustomControls;
 			sourceTree = "<group>";
@@ -432,10 +432,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				678C0AA623A3896E00C6079E /* SwiftyStarRatingView.swift in Sources */,
 				678B137523A1983A004C9304 /* Genre.swift in Sources */,
 				678B135523A184C5004C9304 /* WebServiceManager.swift in Sources */,
 				678C0AA423A2CE6500C6079E /* MovieDetailsViewController.swift in Sources */,
-				678C0AA223A2BF7500C6079E /* StarsView.swift in Sources */,
 				678B135D23A18B21004C9304 /* SplashPresenter.swift in Sources */,
 				678B135423A184C5004C9304 /* CoreDataManager.swift in Sources */,
 				678C0A9923A2AD1B00C6079E /* GeneralProtocols.swift in Sources */,
